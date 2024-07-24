@@ -1,5 +1,7 @@
 package com.example.springsecuritytest.Controller;
 
+import com.example.springsecuritytest.dto.CustomUserDetails;
+import com.example.springsecuritytest.entity.UserEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -36,4 +38,17 @@ public class MainController {
         model.addAttribute("role", role);
         return "main";
     }
+
+//    @GetMapping("/api")
+//    public UserEntity main1P() {
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//
+//        UserEntity principal = (UserEntity) authentication.getPrincipal();
+////        int id = principal.getId();
+////        String role = principal.getRole();
+//
+//
+//
+//        return principal;
+//    }
 }
